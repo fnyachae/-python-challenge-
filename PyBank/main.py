@@ -70,3 +70,13 @@ with open(budget_csv_path) as csv_file:
     # variable to hold the month with the greatest increase in profits (date and amount) over the entire period
     greatest_profit_month = list_date[list_changes.index(greatest_profit)+1]        
     print(greatest_profit_month)
+
+    # variable to hold the greatest decrease in profits (date and amount) over the entire period
+    greatest_loss = min(list_changes)
+
+    print(greatest_loss)
+
+    # variable to hold the month with the greatest decrease in profits (date and amount) over the entire period
+    greatest_loss_month = list_date[list_changes.index(greatest_loss)+1]
+
+    print(greatest_loss_month)
