@@ -34,3 +34,14 @@ with open(budget_csv_path) as csv_file:
     print (list_date)
 
     print (list_profits_losses)
+
+    # Variable to hold The net total amount of "Profit/Losses" over the entire period
+    net_profit_loss = 0
+
+    # loop through each value in list_profits_losses
+    for amount in list_profits_losses:
+        net_profit_loss += int(amount)
+
+    print (net_profit_loss)  
+        
+
