@@ -38,10 +38,31 @@ with open(budget_csv_path) as csv_file:
     # Variable to hold The net total amount of "Profit/Losses" over the entire period
     net_profit_loss = 0
 
+    # the variable to hold list of changes in "Profit/Losses" 
+    list_changes = []
+
+    # variable to hold previous "Profit/Losses" 
+    previous_p_l = 0    
+
     # loop through each value in list_profits_losses
     for amount in list_profits_losses:
         net_profit_loss += int(amount)
 
+        if previous_p_l == 0:   
+            previous_p_l = int(amount)
+        else:
+            list_changes.append(int(amount)-previous_p_l)
+            previous_p_l = int(amount)
+      
+
+    # variable to hold the average of the changes in "Profit/Losses" over the entire period
+    average_changes = round((int(list_profits_losses[total_months-1])-int(list_profits_losses[0]))/(total_months-1),2)
+    print(average_changes)
     print (net_profit_loss)  
+    
+    print (list_changes)
+
+
+
         
 
