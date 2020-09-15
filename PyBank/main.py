@@ -28,13 +28,6 @@ with open(budget_csv_path) as csv_file:
 
         list_profits_losses.append(row[1])
         
-        
-    print (total_months)
-
-    print (list_date)
-
-    print (list_profits_losses)
-
     # Variable to hold The net total amount of "Profit/Losses" over the entire period
     net_profit_loss = 0
 
@@ -54,29 +47,20 @@ with open(budget_csv_path) as csv_file:
             list_changes.append(int(amount)-previous_p_l)
             previous_p_l = int(amount)
       
-
     # variable to hold the average of the changes in "Profit/Losses" over the entire period
     average_changes = round((int(list_profits_losses[total_months-1])-int(list_profits_losses[0]))/(total_months-1),2)
-    print(average_changes)
-    print (net_profit_loss)  
-    
-    print (list_changes)
-
+       
     # variable to hold the greatest increase in profits (date and amount) over the entire period
     greatest_profit = max(list_changes)
 
-    print(greatest_profit)
-
     # variable to hold the month with the greatest increase in profits (date and amount) over the entire period
     greatest_profit_month = list_date[list_changes.index(greatest_profit)+1]        
-    print(greatest_profit_month)
-
+    
     # variable to hold the greatest decrease in profits (date and amount) over the entire period
     greatest_loss = min(list_changes)
-
-    print(greatest_loss)
 
     # variable to hold the month with the greatest decrease in profits (date and amount) over the entire period
     greatest_loss_month = list_date[list_changes.index(greatest_loss)+1]
 
-    print(greatest_loss_month)
+    
+    
