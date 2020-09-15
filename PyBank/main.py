@@ -76,3 +76,23 @@ analysis_summary.append(f"Greatest Decrease in Profits: {greatest_loss_month} ($
 # print analysis summary in the terminal
 for summary in analysis_summary:
     print (summary) 
+
+# variable to hold the analysis summary
+analysis_summary= []
+analysis_summary.append("Financial Analysis\n")
+analysis_summary.append("----------------------------\n")
+analysis_summary.append(f"Total Months: {total_months}\n")
+analysis_summary.append(f"Total: ${net_profit_loss}\n")   
+analysis_summary.append(f"Average  Change: ${average_changes}\n")  
+analysis_summary.append(f"Greatest Increase in Profits: { greatest_profit_month} (${greatest_profit})\n")
+analysis_summary.append(f"Greatest Decrease in Profits: {greatest_loss_month} (${greatest_loss})\n")
+
+# write the file path into a variable 
+output_path = os.path.join("..", "Analysis", "PyBank_Analysis_Summary.txt")
+
+# Open and write txt file
+with open(output_path,"w") as txt_file:
+
+    txt_file.writelines(analysis_summary)
+
+
