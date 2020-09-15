@@ -14,8 +14,23 @@ with open(budget_csv_path) as csv_file:
     # Variable to hold total months 
     total_months = 0
 
+    # the variable to hold list of dates from the csv file
+    list_date = []
+
+    # the variable to hold list of profit and losses from the csv file
+    list_profits_losses = []
+
      # Read through each row of data after the header
     for row in csv_reader:
         total_months +=1
+
+        list_date.append(row[0])
+
+        list_profits_losses.append(row[1])
+        
         
     print (total_months)
+
+    print (list_date)
+
+    print (list_profits_losses)
