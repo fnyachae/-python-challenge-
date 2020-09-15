@@ -63,4 +63,16 @@ with open(budget_csv_path) as csv_file:
     greatest_loss_month = list_date[list_changes.index(greatest_loss)+1]
 
     
-    
+# variable to hold the analysis summary
+analysis_summary= []
+analysis_summary.append("Financial Analysis")
+analysis_summary.append("----------------------------")
+analysis_summary.append(f"Total Months: {total_months}")
+analysis_summary.append(f"Total: ${net_profit_loss}")   
+analysis_summary.append(f"Average  Change: ${average_changes}")  
+analysis_summary.append(f"Greatest Increase in Profits: { greatest_profit_month} (${greatest_profit})")
+analysis_summary.append(f"Greatest Decrease in Profits: {greatest_loss_month} (${greatest_loss})")
+
+# print analysis summary in the terminal
+for summary in analysis_summary:
+    print (summary) 
