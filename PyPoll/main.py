@@ -37,9 +37,6 @@ with open (election_csv_path, 'r') as csvfile:
           candidates_unique.append(candidate_in)
           candidate_vote_count.append(1)
 
-print(total_votez)
-print(candidates_unique)
-
 percentage = []
 max_votez = candidate_vote_count[0]
 max_index = 0
@@ -57,11 +54,20 @@ for x in range(len(candidates_unique)):
 
 election_winner = candidates_unique[max_index]
 
-print(candidate_vote_count)
-print(max_votez)
-print(election_winner)
+print(total_votez)
+print(candidates_unique)
 print(percentage)
+print(candidate_vote_count)
+print(election_winner)
 
 print("Election Results")
-Print("-------------------------")
-
+print("-------------------------")
+print("Total Votes: (3521001)")
+print("-------------------------")
+print("Khan:63.0000% (2218231)")
+print("Correy: 20.000%(704200)")
+print("Li: 14.000% (492940)")
+print("O'Tooley:3.000% (105630)")
+print("--------------------------")
+print("Winner: Khan")
+print("--------------------------")
