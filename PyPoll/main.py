@@ -54,11 +54,18 @@ for x in range(len(candidates_unique)):
 
 election_winner = candidates_unique[max_index]
 
+#the file to write to
+output_path =os.path.join("analysis", "analysis.txt")
+
+
+
 print(total_votez)
 print(candidates_unique)
 print(percentage)
 print(candidate_vote_count)
 print(election_winner)
+
+
 
 print("Election Results")
 print("-------------------------")
