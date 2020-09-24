@@ -39,7 +39,6 @@ with open (election_csv_path, 'r') as csvfile:
 
 print(total_votez)
 print(candidates_unique)
-print(candidates_unique.index(candidate_in))
 
 percentage = []
 max_votez = candidate_vote_count[0]
@@ -58,15 +57,11 @@ for x in range(len(candidates_unique)):
 
 election_winner = candidates_unique[max_index]
 
-
 print(candidate_vote_count)
 print(max_votez)
 print(election_winner)
 print(percentage)
 
-
-
-
-
-   
+print("Election Results")
+Print("-------------------------")
 
